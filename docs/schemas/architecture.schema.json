@@ -1,0 +1,86 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Architecture Entry",
+  "description": "Judgment lines for expensive technical posture, decorative scale, and self-inflicted distributed systems.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "category",
+    "title",
+    "summary",
+    "tags",
+    "tone",
+    "version",
+    "created_at",
+    "updated_at",
+    "verdict",
+    "severity",
+    "why_it_happens",
+    "recommended_fix"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Stable slug for the entry."
+    },
+    "category": {
+      "type": "string",
+      "description": "Category slug used in API paths."
+    },
+    "title": {
+      "type": "string",
+      "description": "Display title."
+    },
+    "summary": {
+      "type": "string",
+      "description": "Short, high-signal description."
+    },
+    "tags": {
+      "type": "array",
+      "description": "Searchable tags for browsing and filtering.",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1
+    },
+    "tone": {
+      "type": "string",
+      "description": "Primary writing mode."
+    },
+    "version": {
+      "type": "string",
+      "description": "Content object schema version."
+    },
+    "created_at": {
+      "type": "string",
+      "description": "Initial publication date in ISO local date form."
+    },
+    "updated_at": {
+      "type": "string",
+      "description": "Most recent update date in ISO local date form."
+    },
+    "verdict": {
+      "type": "string",
+      "description": "Shortest possible judgment line."
+    },
+    "severity": {
+      "type": "string",
+      "description": "Complexity damage level.",
+      "enum": [
+        "low",
+        "medium",
+        "high",
+        "critical"
+      ]
+    },
+    "why_it_happens": {
+      "type": "string",
+      "description": "Why teams still choose this shape."
+    },
+    "recommended_fix": {
+      "type": "string",
+      "description": "Boring replacement move."
+    }
+  }
+}

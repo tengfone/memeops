@@ -1,0 +1,89 @@
+{
+  "version": "1.0.0",
+  "schemas": [
+    {
+      "name": "common",
+      "path": "schemas/common.schema.json"
+    },
+    {
+      "name": "architecture",
+      "path": "schemas/architecture.schema.json"
+    },
+    {
+      "name": "incident",
+      "path": "schemas/incident.schema.json"
+    },
+    {
+      "name": "agent",
+      "path": "schemas/agent.schema.json"
+    },
+    {
+      "name": "decision",
+      "path": "schemas/decision.schema.json"
+    },
+    {
+      "name": "postmortem",
+      "path": "schemas/postmortem.schema.json"
+    },
+    {
+      "name": "severity",
+      "path": "schemas/severity.schema.json"
+    },
+    {
+      "name": "token",
+      "path": "schemas/token.schema.json"
+    },
+    {
+      "name": "startup",
+      "path": "schemas/startup.schema.json"
+    },
+    {
+      "name": "observability",
+      "path": "schemas/observability.schema.json"
+    },
+    {
+      "name": "deploy",
+      "path": "schemas/deploy.schema.json"
+    },
+    {
+      "name": "runbook",
+      "path": "schemas/runbook.schema.json"
+    },
+    {
+      "name": "latency",
+      "path": "schemas/latency.schema.json"
+    },
+    {
+      "name": "oncall",
+      "path": "schemas/oncall.schema.json"
+    },
+    {
+      "name": "migration",
+      "path": "schemas/migration.schema.json"
+    },
+    {
+      "name": "review",
+      "path": "schemas/review.schema.json"
+    },
+    {
+      "name": "compliance",
+      "path": "schemas/compliance.schema.json"
+    },
+    {
+      "name": "roadmap",
+      "path": "schemas/roadmap.schema.json"
+    },
+    {
+      "name": "meeting",
+      "path": "schemas/meeting.schema.json"
+    },
+    {
+      "name": "ticket",
+      "path": "schemas/ticket.schema.json"
+    },
+    {
+      "name": "platform",
+      "path": "schemas/platform.schema.json"
+    }
+  ]
+}

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About MemeOps</title>
+    <meta
+      name="description"
+      content="Why MemeOps exists and why the content is packaged as a static API."
+    />
+    <link rel="stylesheet" href="./assets/style.css" />
+    <script type="module" src="./assets/app.js"></script>
+  </head>
+  <body data-page="about">
+    <div class="site-shell">
+      <header class="site-header">
+        <div class="site-header-inner">
+          <a class="brand" href="./index.html">
+            <div class="brand-mark mono">MO</div>
+            <div class="brand-copy">
+              <strong>MemeOps</strong>
+              <span>STATIC API // V1</span>
+            </div>
+          </a>
+          <nav class="site-nav" aria-label="Primary">
+            <ul>
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./docs.html">API Docs</a></li>
+              <li><a href="./categories.html">Categories</a></li>
+              <li><a href="./about.html" aria-current="page">About</a></li>
+              <li><a href="./pricing.html">Pricing</a></li>
+              <li><a href="./status.html">Status</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+      <main>
+        <section class="page-hero">
+          <div class="page-hero-content">
+            <div class="eyebrow">About</div>
+            <h1 class="page-title">Built like a product because the structure is part of the joke.</h1>
+            <p class="lede">
+              MemeOps treats operational pain as reusable content with schemas,
+              indexes, docs, and just enough fake enterprise posture to feel
+              slightly overfunded.
+            </p>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-inner">
+            <div class="two-column">
+              <div>
+                <div class="section-header">
+                  <div class="eyebrow">Intent</div>
+                  <h2 class="section-title">Calm under panic. Slightly hostile to unnecessary complexity.</h2>
+                </div>
+                <p class="section-copy">
+                  The humor only works when it stays technically literate. Every
+                  entry is designed to read quickly, land cleanly, and still feel
+                  like something a tired engineer could have actually said after a
+                  long week.
+                </p>
+                <ul class="plain-list">
+                  <li>Source content lives in curated JSON files.</li>
+                  <li>Build scripts validate and publish static endpoints.</li>
+                  <li>The docs site reads those same endpoints for previews and filtering.</li>
+                  <li>The result is extensible enough for future bots, widgets, and browser experiments.</li>
+                </ul>
+              </div>
+              <div>
+                <img
+                  class="feature-image"
+                  src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1400&q=80"
+                  alt="Close-up circuit board used as supporting image for the MemeOps about page"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section section-alt">
+          <div class="section-inner">
+            <div class="section-header">
+              <div class="eyebrow">Design Rules</div>
+              <h2 class="section-title">Funny because it is true, not because it is loud.</h2>
+            </div>
+            <div class="feature-grid">
+              <article class="card">
+                <h3>Dry tone</h3>
+                <p>
+                  The copy avoids meme sludge. The joke lands through accurate wording,
+                  not volume or internet filler.
+                </p>
+              </article>
+              <article class="card">
+                <h3>Reusable payloads</h3>
+                <p>
+                  Every object is shaped for reuse in docs, bots, screenshots, or future
+                  mini-products without rewriting the core content.
+                </p>
+              </article>
+              <article class="card">
+                <h3>Static-first</h3>
+                <p>
+                  The published API lives under <span class="mono">/api/v1/</span>. No backend,
+                  no auth, no database, and very little to break.
+                </p>
+              </article>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <div class="footer-inner">
+          <div class="footer-top">
+            <div>
+              <div class="eyebrow">MemeOps</div>
+              <p class="footer-note">
+                Static API for operational truth, architectural regret, and enterprise-grade nonsense.
+              </p>
+            </div>
+            <div class="footer-links">
+              <a href="./docs.html">API Docs</a>
+              <a href="./categories.html">Categories</a>
+              <a href="./about.html">About</a>
+              <a href="./changelog.html">Changelog</a>
+              <a href="./pricing.html">Pricing</a>
+              <a href="./status.html">Status</a>
+              <a href="./compliance.html">Compliance</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <div class="hidden" id="page-error"></div>
+  </body>
+</html>

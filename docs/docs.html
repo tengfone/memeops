@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MemeOps API Docs</title>
+    <meta
+      name="description"
+      content="Reference documentation for the MemeOps static API."
+    />
+    <link rel="stylesheet" href="./assets/style.css?v=20260417-docs-fix-2" />
+    <script type="module" src="./assets/app.js?v=20260417-docs-fix-2"></script>
+  </head>
+  <body data-page="docs">
+    <div class="site-shell">
+      <header class="site-header">
+        <div class="site-header-inner">
+          <a class="brand" href="./index.html">
+            <div class="brand-mark mono">MO</div>
+            <div class="brand-copy">
+              <strong>MemeOps</strong>
+              <span>STATIC API // V1</span>
+            </div>
+          </a>
+          <nav class="site-nav" aria-label="Primary">
+            <ul>
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./docs.html" aria-current="page">API Docs</a></li>
+              <li><a href="./categories.html">Categories</a></li>
+              <li><a href="./about.html">About</a></li>
+              <li><a href="./pricing.html">Pricing</a></li>
+              <li><a href="./status.html">Status</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+      <main>
+        <div class="docs-reference-shell">
+          <div class="docs-reference-layout">
+            <aside class="docs-sidebar">
+              <div class="docs-sidebar-header">
+                <div class="docs-sidebar-kicker">API Reference</div>
+                <div class="docs-sidebar-title">MemeOps API</div>
+              </div>
+              <div class="docs-sidebar-group">
+                <div class="docs-sidebar-label">Reference</div>
+                <a class="docs-sidebar-link" href="#overview">Overview</a>
+                <a class="docs-sidebar-link" href="#random-endpoint">Random</a>
+              </div>
+              <div class="docs-sidebar-group">
+                <div class="docs-sidebar-label">Resources</div>
+                <nav id="docs-resource-nav" class="docs-sidebar-nav" aria-label="Resources"></nav>
+              </div>
+            </aside>
+
+            <section class="docs-main-column">
+              <section class="docs-overview" id="overview">
+                <div class="eyebrow">Reference</div>
+                <h1 class="docs-title">Read-only endpoints with better manners than most platforms.</h1>
+                <p class="docs-lede">
+                  MemeOps ships static collection endpoints under <span class="mono">v1</span>, consistent response shapes, and
+                  a short utility endpoint for grabbing a random sample without browsing a category first.
+                </p>
+                <div class="docs-meta-grid">
+                  <div class="docs-meta-item">
+                    <span>Base URL</span>
+                    <strong class="mono" id="docs-base-url">https://tengfone.github.io/memeops/api/v1/</strong>
+                  </div>
+                  <div class="docs-meta-item">
+                    <span>Format</span>
+                    <strong>JSON collections</strong>
+                  </div>
+                  <div class="docs-meta-item">
+                    <span>Writes</span>
+                    <strong>None</strong>
+                  </div>
+                </div>
+                <div class="docs-code-frame docs-overview-code">
+                  <div class="docs-code-header">
+                    <h3>Quickstart</h3>
+                    <button class="button button-quiet" type="button" data-copy-target="docs-quickstart-code">
+                      Copy Fetch
+                    </button>
+                  </div>
+                  <pre class="code-block" id="docs-quickstart-code"></pre>
+                </div>
+              </section>
+
+              <section class="docs-reference-block" id="random-endpoint">
+                <div class="docs-block-header">
+                  <div>
+                    <div class="docs-block-kicker">Random</div>
+                    <h2>/api/v1/random</h2>
+                  </div>
+                  <span class="docs-method-pill">GET</span>
+                </div>
+                <p class="docs-block-copy">
+                  Returns a build-time random sample from the full catalog. For true client-side randomness,
+                  fetch a collection and sample locally.
+                </p>
+                <div class="docs-resource-meta">
+                  <span class="docs-method-pill">GET</span>
+                  <span class="pill mono">/api/v1/random</span>
+                </div>
+                <div class="docs-code-frame">
+                  <div class="docs-code-header">
+                    <h3>Random Response</h3>
+                    <button class="button button-quiet" type="button" data-copy-target="docs-random-code">
+                      Copy JSON
+                    </button>
+                  </div>
+                  <pre class="code-block" id="docs-random-code"></pre>
+                </div>
+              </section>
+
+              <div id="docs-catalog" class="docs-section-stack"></div>
+            </section>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="footer-inner">
+          <div class="footer-top">
+            <div>
+              <div class="eyebrow">MemeOps</div>
+              <p class="footer-note">
+                Static API for operational truth, architectural regret, and enterprise-grade nonsense.
+              </p>
+            </div>
+            <div class="footer-links">
+              <a href="./docs.html">API Docs</a>
+              <a href="./categories.html">Categories</a>
+              <a href="./about.html">About</a>
+              <a href="./changelog.html">Changelog</a>
+              <a href="./pricing.html">Pricing</a>
+              <a href="./status.html">Status</a>
+              <a href="./compliance.html">Compliance</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <div class="hidden" id="page-error"></div>
+  </body>
+</html>

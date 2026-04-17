@@ -1,0 +1,92 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Decision Entry",
+  "description": "Opinionated answers for recurring engineering choices that usually get over-discussed and under-bounded.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "category",
+    "title",
+    "summary",
+    "tags",
+    "tone",
+    "version",
+    "created_at",
+    "updated_at",
+    "question",
+    "answer",
+    "confidence",
+    "reason",
+    "anti_pattern",
+    "when_to_reconsider"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Stable slug for the entry."
+    },
+    "category": {
+      "type": "string",
+      "description": "Category slug used in API paths."
+    },
+    "title": {
+      "type": "string",
+      "description": "Display title."
+    },
+    "summary": {
+      "type": "string",
+      "description": "Short, high-signal description."
+    },
+    "tags": {
+      "type": "array",
+      "description": "Searchable tags for browsing and filtering.",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1
+    },
+    "tone": {
+      "type": "string",
+      "description": "Primary writing mode."
+    },
+    "version": {
+      "type": "string",
+      "description": "Content object schema version."
+    },
+    "created_at": {
+      "type": "string",
+      "description": "Initial publication date in ISO local date form."
+    },
+    "updated_at": {
+      "type": "string",
+      "description": "Most recent update date in ISO local date form."
+    },
+    "question": {
+      "type": "string",
+      "description": "Decision prompt posed in plain language."
+    },
+    "answer": {
+      "type": "string",
+      "description": "Recommended choice."
+    },
+    "confidence": {
+      "type": "number",
+      "description": "Confidence from 0 to 1.",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "reason": {
+      "type": "string",
+      "description": "Why the answer is operationally defensible."
+    },
+    "anti_pattern": {
+      "type": "string",
+      "description": "The common bad move this oracle is trying to stop."
+    },
+    "when_to_reconsider": {
+      "type": "string",
+      "description": "Condition under which the answer changes."
+    }
+  }
+}

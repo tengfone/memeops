@@ -1,0 +1,90 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Compliance Entry",
+  "description": "Formal control language for environments where the spreadsheet, the screenshot, and the human memory are still technically part of the system.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "category",
+    "title",
+    "summary",
+    "tags",
+    "tone",
+    "version",
+    "created_at",
+    "updated_at",
+    "control_area",
+    "plain_truth",
+    "auditability",
+    "compensating_control",
+    "operator_comment"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Stable slug for the entry."
+    },
+    "category": {
+      "type": "string",
+      "description": "Category slug used in API paths."
+    },
+    "title": {
+      "type": "string",
+      "description": "Display title."
+    },
+    "summary": {
+      "type": "string",
+      "description": "Short, high-signal description."
+    },
+    "tags": {
+      "type": "array",
+      "description": "Searchable tags for browsing and filtering.",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1
+    },
+    "tone": {
+      "type": "string",
+      "description": "Primary writing mode."
+    },
+    "version": {
+      "type": "string",
+      "description": "Content object schema version."
+    },
+    "created_at": {
+      "type": "string",
+      "description": "Initial publication date in ISO local date form."
+    },
+    "updated_at": {
+      "type": "string",
+      "description": "Most recent update date in ISO local date form."
+    },
+    "control_area": {
+      "type": "string",
+      "description": "Named area under review."
+    },
+    "plain_truth": {
+      "type": "string",
+      "description": "What the control posture actually depends on."
+    },
+    "auditability": {
+      "type": "string",
+      "description": "How defensible the evidence chain is.",
+      "enum": [
+        "low",
+        "medium",
+        "high"
+      ]
+    },
+    "compensating_control": {
+      "type": "string",
+      "description": "Fallback control carrying too much weight."
+    },
+    "operator_comment": {
+      "type": "string",
+      "description": "Private explanation from the people keeping it alive."
+    }
+  }
+}

@@ -1,0 +1,1924 @@
+{
+  "name": "MemeOps",
+  "tagline": "A static API for operational truth, architectural regret, and enterprise-grade nonsense.",
+  "site_url": "https://tengfone.github.io/memeops/",
+  "public_api_url": "https://tengfone.github.io/memeops/api/v1/",
+  "api_version": "v1",
+  "content_version": "1.0.0",
+  "generated_at": "2026-04-17T12:46:24.795Z",
+  "categories": [
+    {
+      "id": "architecture",
+      "title": "Architecture",
+      "summary": "Judgment lines for expensive technical posture, decorative scale, and self-inflicted distributed systems.",
+      "tone": "dry",
+      "icon": "ARC",
+      "accent": "#635bff",
+      "count": 1000,
+      "sample_id": "architecture-0001",
+      "path": "/api/v1/architecture",
+      "public_url": "https://tengfone.github.io/memeops/api/v1/architecture",
+      "schema": "schemas/architecture.schema.json",
+      "notes": [
+        "These entries roast complexity, not ambition.",
+        "Use them when a diagram has more moving parts than active users."
+      ],
+      "fields": [
+        {
+          "name": "id",
+          "type": "string",
+          "description": "Stable slug for the entry."
+        },
+        {
+          "name": "category",
+          "type": "string",
+          "description": "Category slug used in API paths."
+        },
+        {
+          "name": "title",
+          "type": "string",
+          "description": "Display title."
+        },
+        {
+          "name": "summary",
+          "type": "string",
+          "description": "Short, high-signal description."
+        },
+        {
+          "name": "tags",
+          "type": "array",
+          "itemType": "string",
+          "description": "Searchable tags for browsing and filtering."
+        },
+        {
+          "name": "tone",
+          "type": "string",
+          "description": "Primary writing mode."
+        },
+        {
+          "name": "version",
+          "type": "string",
+          "description": "Content object schema version."
+        },
+        {
+          "name": "created_at",
+          "type": "string",
+          "description": "Initial publication date in ISO local date form."
+        },
+        {
+          "name": "updated_at",
+          "type": "string",
+          "description": "Most recent update date in ISO local date form."
+        },
+        {
+          "name": "verdict",
+          "type": "string",
+          "description": "Shortest possible judgment line."
+        },
+        {
+          "name": "severity",
+          "type": "string",
+          "description": "Complexity damage level.",
+          "enum": [
+            "low",
+            "medium",
+            "high",
+            "critical"
+          ]
+        },
+        {
+          "name": "why_it_happens",
+          "type": "string",
+          "description": "Why teams still choose this shape."
+        },
+        {
+          "name": "recommended_fix",
+          "type": "string",
+          "description": "Boring replacement move."
+        }
+      ]
+    },
+    {
+      "id": "incident",
+      "title": "Incident",
+      "summary": "Operationally polished phrases for outages, near misses, and the art of saying the system was fine until users touched it.",
+      "tone": "operational",
+      "icon": "INC",
+      "accent": "#0a7cff",
+      "count": 1000,
+      "sample_id": "incident-0001",
+      "path": "/api/v1/incident",
+      "public_url": "https://tengfone.github.io/memeops/api/v1/incident",
+      "schema": "schemas/incident.schema.json",
+      "notes": [
+        "These lines should sound plausible in a tired comms channel.",
+        "Credibility reflects how long the sentence buys you before follow-up questions."
+      ],
+      "fields": [
+        {
+          "name": "id",
+          "type": "string",
+          "description": "Stable slug for the entry."
+        },
+        {
+          "name": "category",
+          "type": "string",
+          "description": "Category slug used in API paths."
+        },
+        {
+          "name": "title",
+          "type": "string",
+          "description": "Display title."
+        },
+        {
+          "name": "summary",
+          "type": "string",
+          "description": "Short, high-signal description."
+        },
+        {
+          "name": "tags",
+          "type": "array",
+          "itemType": "string",
+          "description": "Searchable tags for browsing and filtering."
+        },
+        {
+          "name": "tone",
+          "type": "string",
+          "description": "Primary writing mode."
+        },
+        {
+          "name": "version",
+          "type": "string",
+          "description": "Content object schema version."
+        },
+        {
+          "name": "created_at",
+          "type": "string",
+          "description": "Initial publication date in ISO local date form."
+        },
+        {
+          "name": "updated_at",
+          "type": "string",
+          "description": "Most recent update date in ISO local date form."
+        },
+        {
+          "name": "excuse",
+          "type": "string",
+          "description": "The polished line as it would appear in the wild."
+        },
+        {
+          "name": "translation",
+          "type": "string",
+          "description": "Plain-language meaning."
+        },
+        {
+          "name": "delivery_context",
+          "type": "string",
+          "description": "Where the line is usually deployed."
+        },
+        {
+          "name": "credibility",
+          "type": "number",
+          "description": "Estimated believability from 0 to 1.",
+          "minimum": 0,
+          "maximum": 1
+        },
+        {
+          "name": "when_to_use",
+          "type": "string",
+          "description": "Conditions that make the excuse survivable."
+        },
+        {
+          "name": "when_it_fails",
+          "type": "string",
+          "description": "Audience or evidence that ruins it immediately."
+        }
+      ]
+    },
+    {
+      "id": "agent",
+      "title": "Agent",
+      "summary": "Performance reviews for coding agents, prompt workers, and synthetic coworkers who move faster than their consequences.",
+      "tone": "fake-hr",
+      "icon": "AGT",
+      "accent": "#24b47e",
+      "count": 1000,
+      "sample_id": "agent-0001",
+      "path": "/api/v1/agent",
+      "public_url": "https://tengfone.github.io/memeops/api/v1/agent",
+      "schema": "schemas/agent.schema.json",
+      "notes": [
+        "These reviews should sound calm while describing real operational risk.",
+        "Reliability is a score, not an act of faith."
+      ],
+      "fields": [
+        {
+          "name": "id",
+          "type": "string",
+          "description": "Stable slug for the entry."
+        },
+        {
+          "name": "category",
+          "type": "string",
+          "description": "Category slug used in API paths."
+        },
+        {
+          "name": "title",
+          "type": "string",
+          "description": "Display title."
+        },
+        {
+          "name": "summary",
+          "type": "string",
+          "description": "Short, high-signal description."
+        },
+        {
+          "name": "tags",
+          "type": "array",
+          "itemType": "string",
+          "description": "Searchable tags for browsing and filtering."
+        },
+        {
+          "name": "tone",
+          "type": "string",
+          "description": "Primary writing mode."
+        },
+        {
+          "name": "version",
+          "type": "string",
+          "description": "Content object schema version."
+        },
+        {
+          "name": "created_at",
+          "type": "string",
+          "description": "Initial publication date in ISO local date form."
+        },
+        {
+          "name": "updated_at",
+          "type": "string",
+          "description": "Most recent update date in ISO local date form."
+        },
+        {
+          "name": "performance_rating",
+          "type": "string",
+          "description": "Fake HR performance band.",
+          "enum": [
+            "needs-improvement",
+            "meets-expectations",
+            "exceeds-expectations"
+          ]
+        },
+        {
+          "name": "reliability_score",
+          "type": "number",
+          "description": "Operational trust score from 0 to 100.",
+          "minimum": 0,
+          "maximum": 100
+        },
+        {
+          "name": "hallucination_risk",
+          "type": "string",
+          "description": "Observed tendency to invent reality.",
+          "enum": [
+            "low",
+            "medium",
+            "high"
+          ]
+        },
+        {
+          "name": "escalation_readiness",
+          "type": "string",
+          "description": "Likelihood that it asks for help before damage.",
+          "enum": [
+            "low",
+            "medium",
+            "high"
+          ]
+        },
+        {
+          "name": "strengths",
+          "type": "array",
+          "itemType": "string",
+          "description": "Behaviors a manager can say with a straight face."
+        },
+        {
+          "name": "improvement_areas",
+          "type": "array",
+          "itemType": "string",
+          "description": "Behaviors threatening the roadmap or pager."
+        },
+        {
+          "name": "promotion_readiness",
+          "type": "string",
+          "description": "Whether more autonomy is survivable.",
+          "enum": [
+            "not-yet",
+            "ready-with-oversight",
+            "under-observation"
+          ]
+        },
+        {
+          "name": "manager_note",
+          "type": "string",
+          "description": "One last sentence that should probably stay internal."
+        }
+      ]
+    },
+    {
+      "id": "decision",
+      "title": "Decision",
+      "summary": "Opinionated answers for recurring engineering choices that usually get over-discussed and under-bounded.",
+      "tone": "opinionated",
+      "icon": "DEC",
+      "accent": "#0ea5e9",
+      "count": 1000,
+      "sample_id": "decision-0001",
+      "path": "/api/v1/decision",
+      "public_url": "https://tengfone.github.io/memeops/api/v1/decision",
+      "schema": "schemas/decision.schema.json",
+      "notes": [
+        "The useful answer is usually the one with less ceremony.",
+        "Confidence should rise when the boring option is obviously correct."
+      ],
+      "fields": [
+        {
+          "name": "id",
+          "type": "string",
+          "description": "Stable slug for the entry."
+        },
+        {
+          "name": "category",
+          "type": "string",
+          "description": "Category slug used in API paths."
+        },
+        {
+          "name": "title",
+          "type": "string",
+          "description": "Display title."
+        },
+        {
+          "name": "summary",
+          "type": "string",
+          "description": "Short, high-signal description."
+        },
+        {
+          "name": "tags",
+          "type": "array",
+          "itemType": "string",
+          "description": "Searchable tags for browsing and filtering."
+        },
+        {
+          "name": "tone",
+          "type": "string",
+          "description": "Primary writing mode."
+        },
+        {
+          "name": "version",
+          "type": "string",
+          "description": "Content object schema version."
+        },
+        {
+          "name": "created_at",
+          "type": "string",
+          "description": "Initial publication date in ISO local date form."
+        },
+        {
+          "name": "updated_at",
+          "type": "string",
+          "description": "Most recent update date in ISO local date form."
+        },
+        {
+          "name": "question",
+          "type": "string",
+          "description": "Decision prompt posed in plain language."
+        },
+        {
+          "name": "answer",
+          "type": "string",
+          "description": "Recommended choice."
+        },
+        {
+          "name": "confidence",
+          "type": "number",
+          "description": "Confidence from 0 to 1.",
+          "minimum": 0,
+          "maximum": 1
+        },
+        {
+          "name": "reason",
+          "type": "string",
+          "description": "Why the answer is operationally defensible."
+        },
+        {
+          "name": "anti_pattern",
+          "type": "string",
+          "description": "The common bad move this oracle is trying to stop."
+        },
+        {
+          "name": "when_to_reconsider",
+          "type": "string",
+          "description": "Condition under which the answer changes."
+        }
+      ]
+    },
+    {
+      "id": "postmortem",
+      "title": "Postmortem",
+      "summary": "Mock incident narratives that read like real operational pain with better grammar and fewer redactions.",
+      "tone": "postmortem",
+      "icon": "PMT",
+      "accent": "#ef4444",
+      "count": 1000,
+      "sample_id": "postmortem-0001",
+      "path": "/api/v1/postmortem",
+      "public_url": "https://tengfone.github.io/memeops/api/v1/postmortem",
+      "schema": "schemas/postmortem.schema.json",
+      "notes": [
+        "These entries should feel like incidents you could plausibly have suffered through.",
+        "Keep the lesson sharp enough to outlive the meeting."
+      ],
+      "fields": [
+        {
+          "name": "id",
+          "type": "string",
+          "description": "Stable slug for the entry."
+        },
+        {
+          "name": "category",
+          "type": "string",
+          "description": "Category slug used in API paths."
+        },
+        {
+          "name": "title",
+          "type": "string",
+          "description": "Display title."
+        },
+        {
+          "name": "summary",
+          "type": "string",
+          "description": "Short, high-signal description."
+        },
+        {
+          "name": "tags",
+          "type": "array",
+          "itemType": "string",
+          "description": "Searchable tags for browsing and filtering."
+        },
+        {
+          "name": "tone",
+          "type": "string",
+          "description": "Primary writing mode."
+        },
+        {
+          "name": "version",
+          "type": "string",
+          "description": "Content object schema version."
+        },
+        {
+          "name": "created_at",
+          "type": "string",
+          "description": "Initial publication date in ISO local date form."
+        },
+        {
+          "name": "updated_at",
+          "type": "string",
+          "description": "Most recent update date in ISO local date form."
+        },
+        {
+          "name": "failure_pattern",
+          "type": "string",
+          "description": "Named failure shape described in the write-up."
+        },
+        {
+          "name": "customer_impact",
+          "type": "string",
+          "description": "What users experienced."
+        },
+        {
+          "name": "root_cause",
+          "type": "string",
+          "description": "Actual technical cause."
+        },
+        {
+          "name": "lesson",
+          "type": "string",
+          "description": "What the team should stop pretending not to know."
+        },
+        {
+          "name": "corrective_action",
+          "type": "string",
+          "description": "Follow-up move with real leverage."
+        }
+      ]
+    },
+    {
+      "id": "severity",
+      "title": "Severity",
+      "summary": "Corporate-language translators for outages, degradation notices, and carefully managed understatement.",
+      "tone": "plain-truth",
+      "icon": "SEV",
+      "accent": "#f59e0b",
+      "count": 1000,
+      "sample_id": "severity-0001",
+      "path": "/api/v1/severity",
+      "public_url": "https://tengfone.github.io/memeops/api/v1/severity",
+      "schema": "schemas/severity.schema.json",
+      "notes": [
+        "The point is translation, not diplomacy.",
+        "Treat the recommended message as emotionally honest default copy."
+      ],
+      "fields": [
+        {
+          "name": "id",
+          "type": "string",
+          "description": "Stable slug for the entry."
+        },
+        {
+          "name": "category",
+          "type": "string",
+          "description": "Category slug used in API paths."
+        },
+        {
+          "name": "title",
+          "type": "string",
+          "description": "Display title."
+        },
+        {
+          "name": "summary",
+          "type": "string",
+          "description": "Short, high-signal description."
+        },
+        {
+          "name": "tags",
+          "type": "array",
+          "itemType": "string",
+          "description": "Searchable tags for browsing and filtering."
+        },
+        {
+          "name": "tone",
+          "type": "string",
+          "description": "Primary writing mode."
+        },
+        {
+          "name": "version",
+          "type": "string",
+          "description": "Content object schema version."
+        },
+        {
+          "name": "created_at",
+          "type": "string",
+          "description": "Initial publication date in ISO local date form."
+        },
+        {
+          "name": "updated_at",
+          "type": "string",
+          "description": "Most recent update date in ISO local date form."
+        },
+        {
+          "name": "phrase",
+          "type": "string",
+          "description": "Original corporate or incident phrase."
+        },
+        {
+          "name": "translation",
+          "type": "string",
+          "description": "What it means in plain language."
+        },
+        {
+          "name": "escalation_level",
+          "type": "string",
+          "description": "Implied urgency level.",
+          "enum": [
+            "low",
+            "medium",
+            "high",
+            "critical"
+          ]
+        },
+        {
+          "name": "blast_radius",
+          "type": "string",
+          "description": "How wide the problem feels from the outside."
+        },
+        {
+          "name": "recommended_message",
+          "type": "string",
+          "description": "Clearer sentence to use instead."
+        }
+      ]
+    },
+    {
+      "id": "token",
+      "title": "Token",
+      "summary": "Judgment for wasteful AI usage, budget theater, and prompt loops that should have been one comment.",
+      "tone": "meta",
+      "icon": "TOK",
+      "accent": "#9333ea",
+      "count": 1000,
+      "sample_id": "token-0001",
+      "path": "/api/v1/token",
+      "public_url": "https://tengfone.github.io/memeops/api/v1/token",
+      "schema": "schemas/token.schema.json",
+      "notes": [
+        "Token guilt works best when the spend and outcome are both painfully legible.",
+        "Finance language should remain just formal enough to sting."
+      ],
+      "fields": [
+        {
+          "name": "id",
+          "type": "string",
+          "description": "Stable slug for the entry."
+        },
+        {
+          "name": "category",
+          "type": "string",
+          "description": "Category slug used in API paths."
+        },
+        {
+          "name": "title",
+          "type": "string",
+          "description": "Display title."
+        },
+        {
+          "name": "summary",
+          "type": "string",
+          "description": "Short, high-signal description."
+        },
+        {
+          "name": "tags",
+          "type": "array",
+          "itemType": "string",
+          "description": "Searchable tags for browsing and filtering."
+        },
+        {
+          "name": "tone",
+          "type": "string",
+          "description": "Primary writing mode."
+        },
+        {
+          "name": "version",
+          "type": "string",
+          "description": "Content object schema version."
+        },
+        {
+          "name": "created_at",
+          "type": "string",
+          "description": "Initial publication date in ISO local date form."
+        },
+        {
+          "name": "updated_at",
+          "type": "string",
+          "description": "Most recent update date in ISO local date form."
+        },
+        {
+          "name": "token_spend",
+          "type": "number",
+          "description": "Estimated token count consumed.",
+          "minimum": 0
+        },
+        {
+          "name": "waste_pattern",
+          "type": "string",
+          "description": "The way the spend became embarrassing."
+        },
+        {
+          "name": "guilt_level",
+          "type": "string",
+          "description": "Waste severity level.",
+          "enum": [
+            "low",
+            "medium",
+            "high",
+            "critical"
+          ]
+        },
+        {
+          "name": "better_use",
+          "type": "string",
+          "description": "Something more defensible to spend the credits on."
+        },
+        {
+          "name": "finance_note",
+          "type": "string",
+          "description": "Dry financial commentary on the decision."
+        }
+      ]
+    },
+    {
+      "id": "startup",
+      "title": "Startup",
+      "summary": "Absurd but plausible company ideas for an economy still trying to expense its way into product truth.",
+      "tone": "venture",
+      "icon": "STP",
+      "accent": "#ec4899",
+      "count": 1000,
+      "sample_id": "startup-0001",
+      "path": "/api/v1/startup",
+      "public_url": "https://tengfone.github.io/memeops/api/v1/startup",
+      "schema": "schemas/startup.schema.json",
+      "notes": [
+        "The joke lands when the buyer and pain are almost credible.",
+        "Moats should sound fundable and operationally suspect."
+      ],
+      "fields": [
+        {
+          "name": "id",
+          "type": "string",
+          "description": "Stable slug for the entry."
+        },
+        {
+          "name": "category",
+          "type": "string",
+          "description": "Category slug used in API paths."
+        },
+        {
+          "name": "title",
+          "type": "string",
+          "description": "Display title."
+        },
+        {
+          "name": "summary",
+          "type": "string",
+          "description": "Short, high-signal description."
+        },
+        {
+          "name": "tags",
+          "type": "array",
+          "itemType": "string",
+          "description": "Searchable tags for browsing and filtering."
+        },
+        {
+          "name": "tone",
+          "type": "string",
+          "description": "Primary writing mode."
+        },
+        {
+          "name": "version",
+          "type": "string",
+          "description": "Content object schema version."
+        },
+        {
+          "name": "created_at",
+          "type": "string",
+          "description": "Initial publication date in ISO local date form."
+        },
+        {
+          "name": "updated_at",
+          "type": "string",
+          "description": "Most recent update date in ISO local date form."
+        },
+        {
+          "name": "pitch",
+          "type": "string",
+          "description": "Short company description."
+        },
+        {
+          "name": "buyer",
+          "type": "string",
+          "description": "Who would allegedly pay for this."
+        },
+        {
+          "name": "moat",
+          "type": "string",
+          "description": "Reason it claims to be defensible."
+        },
+        {
+          "name": "risk",
+          "type": "string",
+          "description": "Most obvious structural problem."
+        },
+        {
+          "name": "investor_reaction",
+          "type": "string",
+          "description": "Likely response from a warmed-up partner meeting."
+        }
+      ]
+    },
+    {
+      "id": "observability",
+      "title": "Observability",
+      "summary": "Signals, dashboards, and telemetry patterns that look useful right up until someone asks for an answer.",
+      "tone": "diagnostic",
+      "icon": "OBS",
+      "accent": "#06b6d4",
+      "count": 1000,
+      "sample_id": "observability-0001",
+      "path": "/api/v1/observability",
+      "public_url": "https://tengfone.github.io/memeops/api/v1/observability",
+      "schema": "schemas/observability.schema.json",
+      "notes": [
+        "These entries describe instrumentation posture more than instrumentation coverage.",
+        "The next move should create clarity, not more charts."
+      ],
+      "fields": [
+        {
+          "name": "id",
+          "type": "string",
+          "description": "Stable slug for the entry."
+        },
+        {
+          "name": "category",
+          "type": "string",
+          "description": "Category slug used in API paths."
+        },
+        {
+          "name": "title",
+          "type": "string",
+          "description": "Display title."
+        },
+        {
+          "name": "summary",
+          "type": "string",
+          "description": "Short, high-signal description."
+        },
+        {
+          "name": "tags",
+          "type": "array",
+          "itemType": "string",
+          "description": "Searchable tags for browsing and filtering."
+        },
+        {
+          "name": "tone",
+          "type": "string",
+          "description": "Primary writing mode."
+        },
+        {
+          "name": "version",
+          "type": "string",
+          "description": "Content object schema version."
+        },
+        {
+          "name": "created_at",
+          "type": "string",
+          "description": "Initial publication date in ISO local date form."
+        },
+        {
+          "name": "updated_at",
+          "type": "string",
+          "description": "Most recent update date in ISO local date form."
+        },
+        {
+          "name": "signal",
+          "type": "string",
+          "description": "What the system appeared to be telling you."
+        },
+        {
+          "name": "false_signal",
+          "type": "string",
+          "description": "Why that signal was comforting but wrong."
+        },
+        {
+          "name": "actual_problem",
+          "type": "string",
+          "description": "The thing that was really broken."
+        },
+        {
+          "name": "next_move",
+          "type": "string",
+          "description": "Highest-leverage diagnostic step."
+        },
+        {
+          "name": "confidence_gap",
+          "type": "string",
+          "description": "Why the team felt informed without actually knowing."
+        }
+      ]
+    },
+    {
+      "id": "deploy",
+      "title": "Deploy",
+      "summary": "Release patterns, rollback anxiety, and deployment language that sounds routine until the hidden dependency logs in.",
+      "tone": "release",
+      "icon": "DPL",
+      "accent": "#10b981",
+      "count": 1000,
+      "sample_id": "deploy-0001",
+      "path": "/api/v1/deploy",
+      "public_url": "https://tengfone.github.io/memeops/api/v1/deploy",
+      "schema": "schemas/deploy.schema.json",
+      "notes": [
+        "These entries should read like a release note written by someone already opening rollback tabs.",
+        "Containment is what kept the incident from gaining a name."
+      ],
+      "fields": [
+        {
+          "name": "id",
+          "type": "string",
+          "description": "Stable slug for the entry."
+        },
+        {
+          "name": "category",
+          "type": "string",
+          "description": "Category slug used in API paths."
+        },
+        {
+          "name": "title",
+          "type": "string",
+          "description": "Display title."
+        },
+        {
+          "name": "summary",
+          "type": "string",
+          "description": "Short, high-signal description."
+        },
+        {
+          "name": "tags",
+          "type": "array",
+          "itemType": "string",
+          "description": "Searchable tags for browsing and filtering."
+        },
+        {
+          "name": "tone",
+          "type": "string",
+          "description": "Primary writing mode."
+        },
+        {
+          "name": "version",
+          "type": "string",
+          "description": "Content object schema version."
+        },
+        {
+          "name": "created_at",
+          "type": "string",
+          "description": "Initial publication date in ISO local date form."
+        },
+        {
+          "name": "updated_at",
+          "type": "string",
+          "description": "Most recent update date in ISO local date form."
+        },
+        {
+          "name": "release_type",
+          "type": "string",
+          "description": "Kind of deployment or rollout."
+        },
+        {
+          "name": "rollback_risk",
+          "type": "string",
+          "description": "How ugly rollback is likely to get.",
+          "enum": [
+            "low",
+            "medium",
+            "high",
+            "critical"
+          ]
+        },
+        {
+          "name": "hidden_dependency",
+          "type": "string",
+          "description": "Dependency that turns routine into special."
+        },
+        {
+          "name": "operator_note",
+          "type": "string",
+          "description": "What the release operator would say privately."
+        },
+        {
+          "name": "containment",
+          "type": "string",
+          "description": "Move that keeps the blast radius bounded."
+        }
+      ]
+    },
+    {
+      "id": "runbook",
+      "title": "Runbook",
+      "summary": "Operational procedure fragments for incidents where the official playbook contains equal parts wisdom and superstition.",
+      "tone": "procedural",
+      "icon": "RUN",
+      "accent": "#14b8a6",
+      "count": 1000,
+      "sample_id": "runbook-0001",
+      "path": "/api/v1/runbook",
+      "public_url": "https://tengfone.github.io/memeops/api/v1/runbook",
+      "schema": "schemas/runbook.schema.json",
+      "notes": [
+        "The best runbooks distinguish signal from ritual.",
+        "Exit conditions matter more than number of steps."
+      ],
+      "fields": [
+        {
+          "name": "id",
+          "type": "string",
+          "description": "Stable slug for the entry."
+        },
+        {
+          "name": "category",
+          "type": "string",
+          "description": "Category slug used in API paths."
+        },
+        {
+          "name": "title",
+          "type": "string",
+          "description": "Display title."
+        },
+        {
+          "name": "summary",
+          "type": "string",
+          "description": "Short, high-signal description."
+        },
+        {
+          "name": "tags",
+          "type": "array",
+          "itemType": "string",
+          "description": "Searchable tags for browsing and filtering."
+        },
+        {
+          "name": "tone",
+          "type": "string",
+          "description": "Primary writing mode."
+        },
+        {
+          "name": "version",
+          "type": "string",
+          "description": "Content object schema version."
+        },
+        {
+          "name": "created_at",
+          "type": "string",
+          "description": "Initial publication date in ISO local date form."
+        },
+        {
+          "name": "updated_at",
+          "type": "string",
+          "description": "Most recent update date in ISO local date form."
+        },
+        {
+          "name": "symptom",
+          "type": "string",
+          "description": "Problem signature the runbook addresses."
+        },
+        {
+          "name": "first_step",
+          "type": "string",
+          "description": "First action in the flow."
+        },
+        {
+          "name": "second_step",
+          "type": "string",
+          "description": "Second action after basic triage."
+        },
+        {
+          "name": "trap",
+          "type": "string",
+          "description": "Common step that wastes time or confidence."
+        },
+        {
+          "name": "exit_condition",
+          "type": "string",
+          "description": "Condition that means the runbook worked."
+        }
+      ]
+    },
+    {
+      "id": "latency",
+      "title": "Latency",
+      "summary": "Response-time narratives for systems that stayed alive just long enough to ruin trust instead of availability charts.",
+      "tone": "weary",
+      "icon": "LAT",
+      "accent": "#38bdf8",
+      "count": 1000,
+      "sample_id": "latency-0001",
+      "path": "/api/v1/latency",
+      "public_url": "https://tengfone.github.io/memeops/api/v1/latency",
+      "schema": "schemas/latency.schema.json",
+      "notes": [
+        "These entries should make room for both dashboard shape and customer pain.",
+        "Mitigation should sound more useful than the average war-room suggestion."
+      ],
+      "fields": [
+        {
+          "name": "id",
+          "type": "string",
+          "description": "Stable slug for the entry."
+        },
+        {
+          "name": "category",
+          "type": "string",
+          "description": "Category slug used in API paths."
+        },
+        {
+          "name": "title",
+          "type": "string",
+          "description": "Display title."
+        },
+        {
+          "name": "summary",
+          "type": "string",
+          "description": "Short, high-signal description."
+        },
+        {
+          "name": "tags",
+          "type": "array",
+          "itemType": "string",
+          "description": "Searchable tags for browsing and filtering."
+        },
+        {
+          "name": "tone",
+          "type": "string",
+          "description": "Primary writing mode."
+        },
+        {
+          "name": "version",
+          "type": "string",
+          "description": "Content object schema version."
+        },
+        {
+          "name": "created_at",
+          "type": "string",
+          "description": "Initial publication date in ISO local date form."
+        },
+        {
+          "name": "updated_at",
+          "type": "string",
+          "description": "Most recent update date in ISO local date form."
+        },
+        {
+          "name": "suspected_cause",
+          "type": "string",
+          "description": "What people blamed first."
+        },
+        {
+          "name": "actual_cause",
+          "type": "string",
+          "description": "What was really responsible."
+        },
+        {
+          "name": "mitigation",
+          "type": "string",
+          "description": "Fastest practical move to buy time."
+        },
+        {
+          "name": "graph_shape",
+          "type": "string",
+          "description": "How the metric looked from the outside."
+        },
+        {
+          "name": "customer_story",
+          "type": "string",
+          "description": "How the issue showed up in real usage."
+        }
+      ]
+    },
+    {
+      "id": "oncall",
+      "title": "Oncall",
+      "summary": "Pages, moods, coping patterns, and the thin layer of professionalism separating investigation from folklore.",
+      "tone": "oncall",
+      "icon": "ONC",
+      "accent": "#fb7185",
+      "count": 1000,
+      "sample_id": "oncall-0001",
+      "path": "/api/v1/oncall",
+      "public_url": "https://tengfone.github.io/memeops/api/v1/oncall",
+      "schema": "schemas/oncall.schema.json",
+      "notes": [
+        "Operator mood belongs in the format because everyone can already see it.",
+        "Scar tissue is accumulated system knowledge with worse branding."
+      ],
+      "fields": [
+        {
+          "name": "id",
+          "type": "string",
+          "description": "Stable slug for the entry."
+        },
+        {
+          "name": "category",
+          "type": "string",
+          "description": "Category slug used in API paths."
+        },
+        {
+          "name": "title",
+          "type": "string",
+          "description": "Display title."
+        },
+        {
+          "name": "summary",
+          "type": "string",
+          "description": "Short, high-signal description."
+        },
+        {
+          "name": "tags",
+          "type": "array",
+          "itemType": "string",
+          "description": "Searchable tags for browsing and filtering."
+        },
+        {
+          "name": "tone",
+          "type": "string",
+          "description": "Primary writing mode."
+        },
+        {
+          "name": "version",
+          "type": "string",
+          "description": "Content object schema version."
+        },
+        {
+          "name": "created_at",
+          "type": "string",
+          "description": "Initial publication date in ISO local date form."
+        },
+        {
+          "name": "updated_at",
+          "type": "string",
+          "description": "Most recent update date in ISO local date form."
+        },
+        {
+          "name": "page_reason",
+          "type": "string",
+          "description": "Why the page fired."
+        },
+        {
+          "name": "operator_mood",
+          "type": "string",
+          "description": "Most accurate emotional state during triage."
+        },
+        {
+          "name": "investigation_path",
+          "type": "string",
+          "description": "How the investigation actually unfolded."
+        },
+        {
+          "name": "resolution",
+          "type": "string",
+          "description": "What finally stabilized reality."
+        },
+        {
+          "name": "scar_tissue",
+          "type": "string",
+          "description": "What this incident permanently taught the team."
+        }
+      ]
+    },
+    {
+      "id": "migration",
+      "title": "Migration",
+      "summary": "System moves, platform replacements, and the hidden invoices carried by every supposedly straightforward cutover.",
+      "tone": "transitional",
+      "icon": "MIG",
+      "accent": "#22c55e",
+      "count": 1000,
+      "sample_id": "migration-0001",
+      "path": "/api/v1/migration",
+      "public_url": "https://tengfone.github.io/memeops/api/v1/migration",
+      "schema": "schemas/migration.schema.json",
+      "notes": [
+        "The hidden cost should be something a senior engineer would actually fear.",
+        "Safest path usually means slower, uglier, and more honest."
+      ],
+      "fields": [
+        {
+          "name": "id",
+          "type": "string",
+          "description": "Stable slug for the entry."
+        },
+        {
+          "name": "category",
+          "type": "string",
+          "description": "Category slug used in API paths."
+        },
+        {
+          "name": "title",
+          "type": "string",
+          "description": "Display title."
+        },
+        {
+          "name": "summary",
+          "type": "string",
+          "description": "Short, high-signal description."
+        },
+        {
+          "name": "tags",
+          "type": "array",
+          "itemType": "string",
+          "description": "Searchable tags for browsing and filtering."
+        },
+        {
+          "name": "tone",
+          "type": "string",
+          "description": "Primary writing mode."
+        },
+        {
+          "name": "version",
+          "type": "string",
+          "description": "Content object schema version."
+        },
+        {
+          "name": "created_at",
+          "type": "string",
+          "description": "Initial publication date in ISO local date form."
+        },
+        {
+          "name": "updated_at",
+          "type": "string",
+          "description": "Most recent update date in ISO local date form."
+        },
+        {
+          "name": "source",
+          "type": "string",
+          "description": "System or posture being left behind."
+        },
+        {
+          "name": "target",
+          "type": "string",
+          "description": "System or posture being moved to."
+        },
+        {
+          "name": "migration_style",
+          "type": "string",
+          "description": "How the team plans to move."
+        },
+        {
+          "name": "hidden_cost",
+          "type": "string",
+          "description": "What the plan is underpricing."
+        },
+        {
+          "name": "safest_path",
+          "type": "string",
+          "description": "Less glamorous way to do it."
+        }
+      ]
+    },
+    {
+      "id": "review",
+      "title": "Review",
+      "summary": "Pull request and design review lines where the visible comment and the actual concern are politely decoupled.",
+      "tone": "reviewer",
+      "icon": "REV",
+      "accent": "#6366f1",
+      "count": 1000,
+      "sample_id": "review-0001",
+      "path": "/api/v1/review",
+      "public_url": "https://tengfone.github.io/memeops/api/v1/review",
+      "schema": "schemas/review.schema.json",
+      "notes": [
+        "The comment text and the subtext should both be useful.",
+        "Mergeability is social truth wearing process language."
+      ],
+      "fields": [
+        {
+          "name": "id",
+          "type": "string",
+          "description": "Stable slug for the entry."
+        },
+        {
+          "name": "category",
+          "type": "string",
+          "description": "Category slug used in API paths."
+        },
+        {
+          "name": "title",
+          "type": "string",
+          "description": "Display title."
+        },
+        {
+          "name": "summary",
+          "type": "string",
+          "description": "Short, high-signal description."
+        },
+        {
+          "name": "tags",
+          "type": "array",
+          "itemType": "string",
+          "description": "Searchable tags for browsing and filtering."
+        },
+        {
+          "name": "tone",
+          "type": "string",
+          "description": "Primary writing mode."
+        },
+        {
+          "name": "version",
+          "type": "string",
+          "description": "Content object schema version."
+        },
+        {
+          "name": "created_at",
+          "type": "string",
+          "description": "Initial publication date in ISO local date form."
+        },
+        {
+          "name": "updated_at",
+          "type": "string",
+          "description": "Most recent update date in ISO local date form."
+        },
+        {
+          "name": "feedback",
+          "type": "string",
+          "description": "Comment as written in the review."
+        },
+        {
+          "name": "subtext",
+          "type": "string",
+          "description": "What the reviewer actually means."
+        },
+        {
+          "name": "severity",
+          "type": "string",
+          "description": "How blocking the feedback really is.",
+          "enum": [
+            "low",
+            "medium",
+            "high",
+            "critical"
+          ]
+        },
+        {
+          "name": "action",
+          "type": "string",
+          "description": "Best next move for the author."
+        },
+        {
+          "name": "mergeability",
+          "type": "string",
+          "description": "Practical merge status.",
+          "enum": [
+            "blocked",
+            "needs-context",
+            "ready-with-risk",
+            "ship-it"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "compliance",
+      "title": "Compliance",
+      "summary": "Formal control language for environments where the spreadsheet, the screenshot, and the human memory are still technically part of the system.",
+      "tone": "bureaucratic",
+      "icon": "CMP",
+      "accent": "#0f766e",
+      "count": 1000,
+      "sample_id": "compliance-0001",
+      "path": "/api/v1/compliance",
+      "public_url": "https://tengfone.github.io/memeops/api/v1/compliance",
+      "schema": "schemas/compliance.schema.json",
+      "notes": [
+        "Keep the control posture polished and the plain truth sharper than it wants to be.",
+        "Compensating control is where operational character becomes visible."
+      ],
+      "fields": [
+        {
+          "name": "id",
+          "type": "string",
+          "description": "Stable slug for the entry."
+        },
+        {
+          "name": "category",
+          "type": "string",
+          "description": "Category slug used in API paths."
+        },
+        {
+          "name": "title",
+          "type": "string",
+          "description": "Display title."
+        },
+        {
+          "name": "summary",
+          "type": "string",
+          "description": "Short, high-signal description."
+        },
+        {
+          "name": "tags",
+          "type": "array",
+          "itemType": "string",
+          "description": "Searchable tags for browsing and filtering."
+        },
+        {
+          "name": "tone",
+          "type": "string",
+          "description": "Primary writing mode."
+        },
+        {
+          "name": "version",
+          "type": "string",
+          "description": "Content object schema version."
+        },
+        {
+          "name": "created_at",
+          "type": "string",
+          "description": "Initial publication date in ISO local date form."
+        },
+        {
+          "name": "updated_at",
+          "type": "string",
+          "description": "Most recent update date in ISO local date form."
+        },
+        {
+          "name": "control_area",
+          "type": "string",
+          "description": "Named area under review."
+        },
+        {
+          "name": "plain_truth",
+          "type": "string",
+          "description": "What the control posture actually depends on."
+        },
+        {
+          "name": "auditability",
+          "type": "string",
+          "description": "How defensible the evidence chain is.",
+          "enum": [
+            "low",
+            "medium",
+            "high"
+          ]
+        },
+        {
+          "name": "compensating_control",
+          "type": "string",
+          "description": "Fallback control carrying too much weight."
+        },
+        {
+          "name": "operator_comment",
+          "type": "string",
+          "description": "Private explanation from the people keeping it alive."
+        }
+      ]
+    },
+    {
+      "id": "roadmap",
+      "title": "Roadmap",
+      "summary": "Promises, dependencies, and strategic hedges for plans that are one staffing change away from becoming philosophy.",
+      "tone": "roadmap",
+      "icon": "RMP",
+      "accent": "#f97316",
+      "count": 1000,
+      "sample_id": "roadmap-0001",
+      "path": "/api/v1/roadmap",
+      "public_url": "https://tengfone.github.io/memeops/api/v1/roadmap",
+      "schema": "schemas/roadmap.schema.json",
+      "notes": [
+        "A roadmap item is a social contract with poor error handling.",
+        "The hedge should sound familiar to anyone who has shipped through reorg season."
+      ],
+      "fields": [
+        {
+          "name": "id",
+          "type": "string",
+          "description": "Stable slug for the entry."
+        },
+        {
+          "name": "category",
+          "type": "string",
+          "description": "Category slug used in API paths."
+        },
+        {
+          "name": "title",
+          "type": "string",
+          "description": "Display title."
+        },
+        {
+          "name": "summary",
+          "type": "string",
+          "description": "Short, high-signal description."
+        },
+        {
+          "name": "tags",
+          "type": "array",
+          "itemType": "string",
+          "description": "Searchable tags for browsing and filtering."
+        },
+        {
+          "name": "tone",
+          "type": "string",
+          "description": "Primary writing mode."
+        },
+        {
+          "name": "version",
+          "type": "string",
+          "description": "Content object schema version."
+        },
+        {
+          "name": "created_at",
+          "type": "string",
+          "description": "Initial publication date in ISO local date form."
+        },
+        {
+          "name": "updated_at",
+          "type": "string",
+          "description": "Most recent update date in ISO local date form."
+        },
+        {
+          "name": "promise",
+          "type": "string",
+          "description": "Thing the roadmap says is coming."
+        },
+        {
+          "name": "actual_dependency",
+          "type": "string",
+          "description": "What really has to happen first."
+        },
+        {
+          "name": "delivery_risk",
+          "type": "string",
+          "description": "Likelihood that the date is fiction.",
+          "enum": [
+            "low",
+            "medium",
+            "high",
+            "critical"
+          ]
+        },
+        {
+          "name": "truth",
+          "type": "string",
+          "description": "Most honest sentence about the item."
+        },
+        {
+          "name": "hedge",
+          "type": "string",
+          "description": "How the commitment gets phrased to survive reality."
+        }
+      ]
+    },
+    {
+      "id": "meeting",
+      "title": "Meeting",
+      "summary": "Recurring calendar rituals for alignment, deniability, and the steady conversion of ambiguity into notes no one will reopen.",
+      "tone": "meeting-room",
+      "icon": "MTG",
+      "accent": "#8b5cf6",
+      "count": 1000,
+      "sample_id": "meeting-0001",
+      "path": "/api/v1/meeting",
+      "public_url": "https://tengfone.github.io/memeops/api/v1/meeting",
+      "schema": "schemas/meeting.schema.json",
+      "notes": [
+        "The stated goal and actual goal should disagree in a realistic way.",
+        "Output is what remains after everyone stops talking."
+      ],
+      "fields": [
+        {
+          "name": "id",
+          "type": "string",
+          "description": "Stable slug for the entry."
+        },
+        {
+          "name": "category",
+          "type": "string",
+          "description": "Category slug used in API paths."
+        },
+        {
+          "name": "title",
+          "type": "string",
+          "description": "Display title."
+        },
+        {
+          "name": "summary",
+          "type": "string",
+          "description": "Short, high-signal description."
+        },
+        {
+          "name": "tags",
+          "type": "array",
+          "itemType": "string",
+          "description": "Searchable tags for browsing and filtering."
+        },
+        {
+          "name": "tone",
+          "type": "string",
+          "description": "Primary writing mode."
+        },
+        {
+          "name": "version",
+          "type": "string",
+          "description": "Content object schema version."
+        },
+        {
+          "name": "created_at",
+          "type": "string",
+          "description": "Initial publication date in ISO local date form."
+        },
+        {
+          "name": "updated_at",
+          "type": "string",
+          "description": "Most recent update date in ISO local date form."
+        },
+        {
+          "name": "meeting_type",
+          "type": "string",
+          "description": "Type of meeting or ritual."
+        },
+        {
+          "name": "stated_goal",
+          "type": "string",
+          "description": "Official reason the calendar invite exists."
+        },
+        {
+          "name": "actual_goal",
+          "type": "string",
+          "description": "What the room is really trying to accomplish."
+        },
+        {
+          "name": "output",
+          "type": "string",
+          "description": "Most likely artifact or conclusion."
+        },
+        {
+          "name": "survivability",
+          "type": "string",
+          "description": "Likelihood of leaving with usable clarity.",
+          "enum": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ticket",
+      "title": "Ticket",
+      "summary": "Backlog requests for work that arrived disguised as a small ask and quietly unfolded into cross-team archaeology.",
+      "tone": "backlog",
+      "icon": "TKT",
+      "accent": "#e11d48",
+      "count": 1000,
+      "sample_id": "ticket-0001",
+      "path": "/api/v1/ticket",
+      "public_url": "https://tengfone.github.io/memeops/api/v1/ticket",
+      "schema": "schemas/ticket.schema.json",
+      "notes": [
+        "The hidden work should make the summary feel immediately suspicious.",
+        "Truthful status is different from what the tracker can tolerate."
+      ],
+      "fields": [
+        {
+          "name": "id",
+          "type": "string",
+          "description": "Stable slug for the entry."
+        },
+        {
+          "name": "category",
+          "type": "string",
+          "description": "Category slug used in API paths."
+        },
+        {
+          "name": "title",
+          "type": "string",
+          "description": "Display title."
+        },
+        {
+          "name": "summary",
+          "type": "string",
+          "description": "Short, high-signal description."
+        },
+        {
+          "name": "tags",
+          "type": "array",
+          "itemType": "string",
+          "description": "Searchable tags for browsing and filtering."
+        },
+        {
+          "name": "tone",
+          "type": "string",
+          "description": "Primary writing mode."
+        },
+        {
+          "name": "version",
+          "type": "string",
+          "description": "Content object schema version."
+        },
+        {
+          "name": "created_at",
+          "type": "string",
+          "description": "Initial publication date in ISO local date form."
+        },
+        {
+          "name": "updated_at",
+          "type": "string",
+          "description": "Most recent update date in ISO local date form."
+        },
+        {
+          "name": "request",
+          "type": "string",
+          "description": "Thing the ticket appears to ask for."
+        },
+        {
+          "name": "hidden_work",
+          "type": "string",
+          "description": "Real effort concealed by the description."
+        },
+        {
+          "name": "priority",
+          "type": "string",
+          "description": "Practical urgency level.",
+          "enum": [
+            "low",
+            "medium",
+            "high",
+            "critical"
+          ]
+        },
+        {
+          "name": "truthful_status",
+          "type": "string",
+          "description": "What the ticket state should really say."
+        },
+        {
+          "name": "expected_response",
+          "type": "string",
+          "description": "Most reasonable answer from the owner."
+        }
+      ]
+    },
+    {
+      "id": "platform",
+      "title": "Platform",
+      "summary": "Internal platform offerings, adoption theater, and the steady translation of one team’s preference into everyone else’s workflow.",
+      "tone": "platform",
+      "icon": "PLT",
+      "accent": "#2563eb",
+      "count": 1000,
+      "sample_id": "platform-0001",
+      "path": "/api/v1/platform",
+      "public_url": "https://tengfone.github.io/memeops/api/v1/platform",
+      "schema": "schemas/platform.schema.json",
+      "notes": [
+        "The best platform jokes are about ownership and incentives, not abstractions alone.",
+        "Retirement plans are where honesty enters the roadmap."
+      ],
+      "fields": [
+        {
+          "name": "id",
+          "type": "string",
+          "description": "Stable slug for the entry."
+        },
+        {
+          "name": "category",
+          "type": "string",
+          "description": "Category slug used in API paths."
+        },
+        {
+          "name": "title",
+          "type": "string",
+          "description": "Display title."
+        },
+        {
+          "name": "summary",
+          "type": "string",
+          "description": "Short, high-signal description."
+        },
+        {
+          "name": "tags",
+          "type": "array",
+          "itemType": "string",
+          "description": "Searchable tags for browsing and filtering."
+        },
+        {
+          "name": "tone",
+          "type": "string",
+          "description": "Primary writing mode."
+        },
+        {
+          "name": "version",
+          "type": "string",
+          "description": "Content object schema version."
+        },
+        {
+          "name": "created_at",
+          "type": "string",
+          "description": "Initial publication date in ISO local date form."
+        },
+        {
+          "name": "updated_at",
+          "type": "string",
+          "description": "Most recent update date in ISO local date form."
+        },
+        {
+          "name": "offering",
+          "type": "string",
+          "description": "Named platform capability."
+        },
+        {
+          "name": "actual_job",
+          "type": "string",
+          "description": "What the platform is really doing."
+        },
+        {
+          "name": "adoption_risk",
+          "type": "string",
+          "description": "Likelihood of forced or performative adoption.",
+          "enum": [
+            "low",
+            "medium",
+            "high",
+            "critical"
+          ]
+        },
+        {
+          "name": "team_cost",
+          "type": "string",
+          "description": "Cost paid by the team operating it."
+        },
+        {
+          "name": "retirement_plan",
+          "type": "string",
+          "description": "How this should eventually be dismantled or absorbed."
+        }
+      ]
+    }
+  ]
+}

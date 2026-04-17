@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MemeOps Categories</title>
+    <meta
+      name="description"
+      content="Browse MemeOps categories, filter entries, and deep-link into static API payloads."
+    />
+    <link rel="stylesheet" href="./assets/style.css?v=20260417-ui-refresh-4" />
+    <script type="module" src="./assets/app.js?v=20260417-ui-refresh-4"></script>
+  </head>
+  <body data-page="categories">
+    <div class="site-shell">
+      <header class="site-header">
+        <div class="site-header-inner">
+          <a class="brand" href="./index.html">
+            <div class="brand-mark mono">MO</div>
+            <div class="brand-copy">
+              <strong>MemeOps</strong>
+              <span>STATIC API // V1</span>
+            </div>
+          </a>
+          <nav class="site-nav" aria-label="Primary">
+            <ul>
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./docs.html">API Docs</a></li>
+              <li><a href="./categories.html" aria-current="page">Categories</a></li>
+              <li><a href="./about.html">About</a></li>
+              <li><a href="./pricing.html">Pricing</a></li>
+              <li><a href="./status.html">Status</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+      <main>
+        <section class="page-hero">
+          <div class="page-hero-content">
+            <div class="eyebrow">Explorer</div>
+            <h1 class="page-title">Browse by category, tone, and entry title without the tag landfill.</h1>
+            <p class="lede">
+              The explorer is client-side by design. It fetches static indexes and
+              lets you deep-link directly into entries.
+            </p>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-inner">
+            <div class="form-shell">
+              <div class="sample-header">
+                <h3>Filters</h3>
+                <button class="button button-quiet" id="random-entry-button" type="button">
+                  Random sample
+                </button>
+              </div>
+              <div class="form-row explorer-filter-row">
+                <div class="field-control">
+                  <label for="category-filter">Category</label>
+                  <select id="category-filter"></select>
+                </div>
+                <div class="field-control">
+                  <label for="tone-filter">Tone</label>
+                  <select id="tone-filter"></select>
+                </div>
+                <div class="field-control field-control-search">
+                  <label for="search-filter">Search</label>
+                  <input
+                    id="search-filter"
+                    type="search"
+                    placeholder="Search titles or summaries"
+                  />
+                </div>
+              </div>
+              <div class="results-summary" id="results-count"></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section section-alt">
+          <div class="section-inner">
+            <div class="explorer-grid">
+              <div class="results-grid" id="results-grid"></div>
+              <aside class="entry-detail" id="entry-detail"></aside>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <div class="footer-inner">
+          <div class="footer-top">
+            <div>
+              <div class="eyebrow">MemeOps</div>
+              <p class="footer-note">
+                Static API for operational truth, architectural regret, and enterprise-grade nonsense.
+              </p>
+            </div>
+            <div class="footer-links">
+              <a href="./docs.html">API Docs</a>
+              <a href="./categories.html">Categories</a>
+              <a href="./about.html">About</a>
+              <a href="./changelog.html">Changelog</a>
+              <a href="./pricing.html">Pricing</a>
+              <a href="./status.html">Status</a>
+              <a href="./compliance.html">Compliance</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <div class="hidden" id="page-error"></div>
+  </body>
+</html>

@@ -1,0 +1,85 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Runbook Entry",
+  "description": "Operational procedure fragments for incidents where the official playbook contains equal parts wisdom and superstition.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "category",
+    "title",
+    "summary",
+    "tags",
+    "tone",
+    "version",
+    "created_at",
+    "updated_at",
+    "symptom",
+    "first_step",
+    "second_step",
+    "trap",
+    "exit_condition"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Stable slug for the entry."
+    },
+    "category": {
+      "type": "string",
+      "description": "Category slug used in API paths."
+    },
+    "title": {
+      "type": "string",
+      "description": "Display title."
+    },
+    "summary": {
+      "type": "string",
+      "description": "Short, high-signal description."
+    },
+    "tags": {
+      "type": "array",
+      "description": "Searchable tags for browsing and filtering.",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1
+    },
+    "tone": {
+      "type": "string",
+      "description": "Primary writing mode."
+    },
+    "version": {
+      "type": "string",
+      "description": "Content object schema version."
+    },
+    "created_at": {
+      "type": "string",
+      "description": "Initial publication date in ISO local date form."
+    },
+    "updated_at": {
+      "type": "string",
+      "description": "Most recent update date in ISO local date form."
+    },
+    "symptom": {
+      "type": "string",
+      "description": "Problem signature the runbook addresses."
+    },
+    "first_step": {
+      "type": "string",
+      "description": "First action in the flow."
+    },
+    "second_step": {
+      "type": "string",
+      "description": "Second action after basic triage."
+    },
+    "trap": {
+      "type": "string",
+      "description": "Common step that wastes time or confidence."
+    },
+    "exit_condition": {
+      "type": "string",
+      "description": "Condition that means the runbook worked."
+    }
+  }
+}

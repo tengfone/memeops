@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MemeOps Changelog</title>
+    <meta
+      name="description"
+      content="Release notes for the MemeOps static API and docs site."
+    />
+    <link rel="stylesheet" href="./assets/style.css" />
+    <script type="module" src="./assets/app.js"></script>
+  </head>
+  <body data-page="changelog">
+    <div class="site-shell">
+      <header class="site-header">
+        <div class="site-header-inner">
+          <a class="brand" href="./index.html">
+            <div class="brand-mark mono">MO</div>
+            <div class="brand-copy">
+              <strong>MemeOps</strong>
+              <span>STATIC API // V1</span>
+            </div>
+          </a>
+          <nav class="site-nav" aria-label="Primary">
+            <ul>
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./docs.html">API Docs</a></li>
+              <li><a href="./categories.html">Categories</a></li>
+              <li><a href="./about.html">About</a></li>
+              <li><a href="./pricing.html">Pricing</a></li>
+              <li><a href="./status.html">Status</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+      <main>
+        <section class="page-hero">
+          <div class="page-hero-content">
+            <div class="eyebrow">Changelog</div>
+            <h1 class="page-title">Version history with slightly too much confidence.</h1>
+            <p class="lede">
+              Useful enough to read. Calm enough to imply operational maturity.
+            </p>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-inner">
+            <div class="card-grid">
+              <article class="card">
+                <div class="eyebrow">2026-04-17</div>
+                <h3>v1.0.0</h3>
+                <ul class="plain-list">
+                  <li>Launched the MemeOps static API and docs site.</li>
+                  <li>Published twenty collections with <span data-entry-count>20000</span> curated entries.</li>
+                  <li>Shipped schema validation, index generation, and static publishing scripts.</li>
+                  <li>Added pricing, status, compliance, about, and changelog surfaces.</li>
+                </ul>
+              </article>
+              <article class="card">
+                <div class="eyebrow">Schema normalization</div>
+                <h3>Common base object</h3>
+                <ul class="plain-list">
+                  <li>Standardized <span class="mono">id</span>, <span class="mono">category</span>, <span class="mono">summary</span>, <span class="mono">tags</span>, and versioning fields.</li>
+                  <li>Published JSON Schema files to <span class="mono">/schemas/</span>.</li>
+                  <li>Aligned category-specific fields around reusable response payloads.</li>
+                </ul>
+              </article>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <div class="footer-inner">
+          <div class="footer-top">
+            <div>
+              <div class="eyebrow">MemeOps</div>
+              <p class="footer-note">
+                Static API for operational truth, architectural regret, and enterprise-grade nonsense.
+              </p>
+            </div>
+            <div class="footer-links">
+              <a href="./docs.html">API Docs</a>
+              <a href="./categories.html">Categories</a>
+              <a href="./about.html">About</a>
+              <a href="./changelog.html">Changelog</a>
+              <a href="./pricing.html">Pricing</a>
+              <a href="./status.html">Status</a>
+              <a href="./compliance.html">Compliance</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

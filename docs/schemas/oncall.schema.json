@@ -1,0 +1,85 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Oncall Entry",
+  "description": "Pages, moods, coping patterns, and the thin layer of professionalism separating investigation from folklore.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "category",
+    "title",
+    "summary",
+    "tags",
+    "tone",
+    "version",
+    "created_at",
+    "updated_at",
+    "page_reason",
+    "operator_mood",
+    "investigation_path",
+    "resolution",
+    "scar_tissue"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Stable slug for the entry."
+    },
+    "category": {
+      "type": "string",
+      "description": "Category slug used in API paths."
+    },
+    "title": {
+      "type": "string",
+      "description": "Display title."
+    },
+    "summary": {
+      "type": "string",
+      "description": "Short, high-signal description."
+    },
+    "tags": {
+      "type": "array",
+      "description": "Searchable tags for browsing and filtering.",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1
+    },
+    "tone": {
+      "type": "string",
+      "description": "Primary writing mode."
+    },
+    "version": {
+      "type": "string",
+      "description": "Content object schema version."
+    },
+    "created_at": {
+      "type": "string",
+      "description": "Initial publication date in ISO local date form."
+    },
+    "updated_at": {
+      "type": "string",
+      "description": "Most recent update date in ISO local date form."
+    },
+    "page_reason": {
+      "type": "string",
+      "description": "Why the page fired."
+    },
+    "operator_mood": {
+      "type": "string",
+      "description": "Most accurate emotional state during triage."
+    },
+    "investigation_path": {
+      "type": "string",
+      "description": "How the investigation actually unfolded."
+    },
+    "resolution": {
+      "type": "string",
+      "description": "What finally stabilized reality."
+    },
+    "scar_tissue": {
+      "type": "string",
+      "description": "What this incident permanently taught the team."
+    }
+  }
+}

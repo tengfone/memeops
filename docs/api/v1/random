@@ -1,0 +1,32 @@
+{
+  "object": "random_sample",
+  "version": "1.0.0",
+  "generated_at": "2026-04-17T12:46:24.795Z",
+  "path": "/api/v1/random",
+  "public_url": "https://tengfone.github.io/memeops/api/v1/random",
+  "note": "This is a build-time random snapshot. For client-side randomness, sample from the category collection endpoints.",
+  "total_available": 20000,
+  "item": {
+    "id": "review-0027",
+    "category": "review",
+    "title": "Do we need this abstraction yet? review",
+    "summary": "Do we need this abstraction yet? is rarely about the line it points at.",
+    "tags": [
+      "review",
+      "do-we-need-this-abstraction-yet",
+      "blocked"
+    ],
+    "tone": "reviewer",
+    "version": "1.0.0",
+    "created_at": "2026-04-17",
+    "updated_at": "2026-04-17",
+    "feedback": "Do we need this abstraction yet?",
+    "subtext": "This diff solved a local discomfort by exporting risk.",
+    "severity": "low",
+    "action": "Add one regression test tied to user behavior.",
+    "mergeability": "blocked",
+    "category_title": "Review",
+    "collection_path": "/api/v1/review",
+    "collection_url": "https://tengfone.github.io/memeops/api/v1/review"
+  }
+}
