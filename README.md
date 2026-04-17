@@ -9,6 +9,32 @@ The project ships as a GitHub Pages-friendly static site under `docs/`, with sou
 - Site: `https://tengfone.github.io/memeops/`
 - API base: `https://tengfone.github.io/memeops/api/v1/`
 
+## API Examples
+
+Fetch the API catalog:
+
+```bash
+curl -s https://tengfone.github.io/memeops/api/v1/index.json
+```
+
+Fetch a random build-time sample:
+
+```bash
+curl -s https://tengfone.github.io/memeops/api/v1/random
+```
+
+Fetch a collection:
+
+```bash
+curl -s https://tengfone.github.io/memeops/api/v1/architecture
+```
+
+Pretty-print with `jq`:
+
+```bash
+curl -s https://tengfone.github.io/memeops/api/v1/random | jq
+```
+
 ## What Ships In This Repo
 
 - versioned JSON endpoints
@@ -48,39 +74,6 @@ npm run preview
 ```
 
 Open `http://localhost:4173/` after starting the preview server.
-
-## Structure
-
-```txt
-memeops/
-├─ PLAN.md
-├─ README.md
-├─ LICENSE
-├─ content/
-│  ├─ architecture/
-│  ├─ incident/
-│  ├─ ...
-│  └─ platform/
-├─ docs/
-│  ├─ index.html
-│  ├─ docs.html
-│  ├─ categories.html
-│  ├─ about.html
-│  ├─ changelog.html
-│  ├─ pricing.html
-│  ├─ status.html
-│  ├─ compliance.html
-│  ├─ assets/
-│  ├─ api/
-│  │  └─ v1/
-│  └─ schemas/
-└─ scripts/
-   ├─ build-content.ts
-   ├─ validate-content.ts
-   ├─ generate-indexes.ts
-   ├─ sync-docs.ts
-   └─ lib.ts
-```
 
 ## Build Model
 
