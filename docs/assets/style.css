@@ -2645,3 +2645,51 @@ body[data-page="status"] .page-hero::before {
     text-align: left;
   }
 }
+
+/* Keep API docs chrome aligned with the rest of the site */
+body[data-page="docs"] .site-header-inner,
+body[data-page="docs"] .footer-inner {
+  width: min(calc(100% - 24px), 1320px);
+}
+
+body[data-page="docs"] .site-nav a {
+  padding-bottom: 4px;
+  color: #425466;
+}
+
+body[data-page="docs"] .docs-reference-shell {
+  width: min(calc(100% - 24px), 1320px);
+  margin: 0 auto;
+}
+
+body[data-page="docs"] .docs-reference-layout {
+  grid-template-columns: 240px minmax(0, 1fr);
+  border-right: 1px solid #e6ebf1;
+  border-left: 1px solid #e6ebf1;
+  background: #ffffff;
+}
+
+body[data-page="docs"] .docs-sidebar {
+  padding-left: 18px;
+}
+
+body[data-page="docs"] .docs-main-column {
+  padding-right: 36px;
+  padding-left: 36px;
+}
+
+@media (max-width: 840px) {
+  body[data-page="docs"] .docs-reference-shell {
+    width: min(calc(100% - 24px), 1320px);
+  }
+
+  body[data-page="docs"] .docs-reference-layout {
+    border-right: none;
+    border-left: none;
+  }
+
+  body[data-page="docs"] .docs-main-column {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
