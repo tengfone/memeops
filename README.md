@@ -1,5 +1,8 @@
 # MemeOps
 
+
+![image](./memeops.gif)
+
 MemeOps is a static JSON API and docs site for infra humor, AI agent satire, and postmortem-grade truth.
 
 The project ships as a GitHub Pages-friendly static site under `docs/`, with source content stored in `content/` and generated API responses published to `docs/api/v1/`.
